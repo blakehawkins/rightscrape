@@ -3,6 +3,11 @@ name = "rightscrape"
 version = "0.1.0"
 authors = ["blakehawkins"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "Read rightmove searh URLs from stdin, emit rightmove result URLs"
+homepage = "https://github.com/blakehawkins/rightscrape"
+repository = "https://github.com/blakehawkins/rightscrape"
+readme = "README.md"
 
 [dependencies]
 select = "0.4.3"
