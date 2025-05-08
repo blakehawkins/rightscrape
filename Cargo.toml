@@ -2,7 +2,7 @@
 name = "rightscrape"
 version = "0.2.0"
 authors = ["blakehawkins"]
-edition = "2018"
+edition = "2024"
 license = "MIT OR Apache-2.0"
 description = "Read rightmove searh URLs from stdin, emit rightmove result URLs"
 homepage = "https://github.com/blakehawkins/rightscrape"
@@ -10,7 +10,7 @@ repository = "https://github.com/blakehawkins/rightscrape"
 readme = "README.md"
 
 [dependencies]
-oops = "0.2.0"
-select = "0.6.0"
-stdinix = "0.1.0"
-ureq = "2.8.0"
+oops = "0.2"
+select = "0.6"
+stdinix = "0.1"
+ureq = "2.8"
