@@ -1,16 +1,12 @@
 use std::io::{Result, Write};
 
-use oops::Oops;
 use select::document::Document;
 use select::predicate::Class;
 use stdinix::stdinix;
 
-fn main() -> Result<()> {
+fn main() -> eyre::Result<()> {
     stdinix(|buf| {
-        let body = ureq::get(buf)
-            .call()
-            .oops("Failed to get URI")?
-            .into_string()?;
+        let body = ureq::get(buf).call()?.into_string()?;
 
         Document::from(&body[..])
             .find(Class("propertyCard-link"))

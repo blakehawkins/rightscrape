@@ -10,7 +10,7 @@ repository = "https://github.com/blakehawkins/rightscrape"
 readme = "README.md"
 
 [dependencies]
-oops = "0.2"
+eyre = "0.6"
 select = "0.6"
-stdinix = "0.1"
+stdinix = "0.3"
 ureq = "2.8"

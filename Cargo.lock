@@ -77,6 +77,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "eyre"
+version = "0.6.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7cd915d99f24784cdc19fd37ef22b97e3ff0ae756c7e492e9fbfe897d61e2aec"
+dependencies = [
+ "indenter",
+ "once_cell",
+]
+
+[[package]]
 name = "flate2"
 version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -270,6 +280,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "indenter"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ce23b50ad8242c51a442f3ff322d56b02f08852c77e4c0b4d3fd684abc89c683"
+
+[[package]]
 name = "libc"
 version = "0.2.172"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -349,12 +365,6 @@ name = "once_cell"
 version = "1.21.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d"
-
-[[package]]
-name = "oops"
-version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6a05b02569b46593ad7633f725dc3d96fe3609c065cdd5529e8e28b9e14d2a06"
 
 [[package]]
 name = "parking_lot"
@@ -518,7 +528,7 @@ dependencies = [
 name = "rightscrape"
 version = "0.2.0"
 dependencies = [
- "oops",
+ "eyre",
  "select",
  "stdinix",
  "ureq",
@@ -642,9 +652,12 @@ checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
 name = "stdinix"
-version = "0.1.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0aa215f7a4fefbdf096d977e84143a5cac88dcb445f28637b4e7db711763a20b"
+checksum = "19e8cf302bfd1a5365db4c510607cdf89c1fa5dc739bb06243ae91f4f98caa71"
+dependencies = [
+ "eyre",
+]
 
 [[package]]
 name = "string_cache"

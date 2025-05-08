@@ -1,7 +1,7 @@
 Read from stdin, scrape rightmove search URLs, emit rightmove property URLS.
 
 ```bash
-$ cargo run < <(xsv select 1 input.tsv)
+$ cargo run < <(xsv select 1 input.tsv | tail -n +2)
     Finished dev [unoptimized + debuginfo] target(s) in 0.47s
      Running `target/debug/rightscrape`
 https://www.rightmove.co.uk/property-to-rent/property-88835966.html
